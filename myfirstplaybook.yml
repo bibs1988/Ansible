@@ -5,11 +5,11 @@
   - name: i want to install webserver on ubuntu
     apt:
       name: apache2
-      state: present
+      state: started
     when: ansible_os_family=="Debian"
 
   - name: i want to start webserver redhat
-    service: 
+    service:
       name: httpd
       state: present
     when: ansible_os_family=="RedHat"
@@ -17,6 +17,6 @@
   - name: i want install webserver on RedHat
     yum: 
       name: httpd
-      state: present
+      state: started
     when: ansible_os_family=="Redhat"
   
