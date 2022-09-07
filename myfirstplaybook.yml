@@ -11,12 +11,12 @@
   - name: i want to start webserver redhat
     service:
       name: httpd
-      state: present
+      state: started
     when: ansible_os_family=="RedHat"
 
   - name: i want install webserver on RedHat
     yum: 
       name: httpd
-      state: started
+      state: present
     when: ansible_os_family=="Redhat"
   
