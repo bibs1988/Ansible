@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: myhosts
   become: yes
   gather_facts: yes
   tasks: 
@@ -7,6 +7,11 @@
     apt:
       name: apache2
       state: present
+
+  - name: i want to install whet
+    apt: 
+     name: wget
+     state: present 
 
   
    
