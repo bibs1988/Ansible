@@ -1,0 +1,10 @@
+---
+- hosts: mynewhosts
+  become: yes
+  tasks:
+  - name: create a file
+    file:
+     path: /home/ubuntu/mytestfile
+     state: touch
+
+  

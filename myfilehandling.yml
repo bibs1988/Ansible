@@ -2,7 +2,12 @@
 - hosts: mynewhosts
   become: yes
   tasks:
-  - name: create a file
+  - include_tasks: myfile.yml
+  - name: create folder
     file:
-     path: /home/ubuntu/mytestfile
-     state: touch
+     path: /home/ubuntu/myfolder
+     state: directory
+  - name: copy file from master to node side
+    copy:
+     src: myfile.txt
+     dest: /home/ubuntu/my2ndfile
