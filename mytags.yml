@@ -6,14 +6,17 @@
      apt:
       name: git
       state: present
+     tags: git
      
    - name: i want to install wget
      apt:
       name: wget
-      state: present
+      statee: present
+     tags: wget
 
 
    - name: i want to install tree
      apt:
       name: tree
       state: present
+     tags: tree
