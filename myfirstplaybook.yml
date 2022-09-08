@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: mynewhosts
   become: yes
   gather_facts: yes
   tasks: 
