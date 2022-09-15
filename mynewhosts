@@ -1,2 +1,5 @@
 [mynewhosts]
 172.31.29.6
+
+[myapplicationservers]
+172.31.83.164
